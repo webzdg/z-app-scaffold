@@ -1,0 +1,36 @@
+{
+	"name": "z-app-scaffold",
+	"version": "1.0.0",
+	"description": "一款自定义前端脚手架App/Monorepo工程",
+	"main": "index.js",
+	"scripts": {
+		"prepare": "husky install"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/webzdg/z-app-scaffold.git"
+	},
+	"keywords": [
+		"scaffold",
+		"fe",
+		"Monorepo"
+	],
+	"author": "webZdg",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/webzdg/z-app-scaffold/issues"
+	},
+	"homepage": "https://github.com/webzdg/z-app-scaffold#readme",
+	"devDependencies": {
+		"@commitlint/cli": "^17.5.1",
+		"@commitlint/config-conventional": "^17.4.4",
+		"@types/node": "^18.15.11",
+		"@typescript-eslint/eslint-plugin": "^5.57.1",
+		"@typescript-eslint/parser": "^5.57.1",
+		"eslint": "^8.37.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.2.0",
+		"prettier": "^2.8.7",
+		"typescript": "^5.0.3"
+	}
+}
