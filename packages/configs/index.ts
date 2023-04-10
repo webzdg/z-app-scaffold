@@ -1,4 +1,4 @@
-import { cyan, green, yellow } from 'kolorist';
+import { cyan, blue, yellow } from 'kolorist';
 
 export const BUSINESS = [
     {
@@ -13,7 +13,7 @@ export const BUSINESS = [
     },
     {
         name: '基础框架不包含React',
-        value: 'microFront',
-        color: green,
+        value: 'frame',
+        color: blue,
     },
 ];

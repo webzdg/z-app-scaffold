@@ -3,4 +3,5 @@ export interface ScaffoldOptions {
     projectName: string;
     overwrite?: boolean;
     typescript: boolean;
+    overwriteChecker?: unknown;
 }

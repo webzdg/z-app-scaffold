@@ -3,4 +3,4 @@
 
 echo "pre-commit lint-staged"
 
-npx --no-install lint-staged --config .lintstagedrc
+npx --no-install lint-staged

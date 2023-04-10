@@ -1,4 +1,4 @@
-import { intro, outro, group, text, select, cancel, confirm } from '@clack/prompts';
+import { intro, outro, group, text, select, cancel, confirm, spinner } from '@clack/prompts';
 import * as process from 'process';
 import * as fs from 'node:fs';
 import { join } from 'node:path';
@@ -52,6 +52,11 @@ async function init() {
                     validate: (input: string) =>
                         isValidProjectName(input) ? void 0 : red('无效的项目名，格式为小写字母连字符，如：abc-def'),
                 }),
+            typescript: () =>
+                confirm({
+                    message: reset('是否使用TypeScript'),
+                    initialValue: true,
+                }),
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             overwrite: ({ results: { projectName } }: { results: ScaffoldOptions }) => {
@@ -63,11 +68,6 @@ async function init() {
                     initialValue: true,
                 });
             },
-            typescript: () =>
-                confirm({
-                    message: reset('是否使用TypeScript'),
-                    initialValue: true,
-                }),
         },
         {
             onCancel: () => {
@@ -84,9 +84,16 @@ async function init() {
     // 当前生成项目的路径(包含文件名)
     const root = join(cwd, targetDir);
 
+    /* ------------------------------------------------清理文件夹------------------------------------------------------ */
     if (overwrite) {
-        outro(`\n${lightMagenta('正在打扫战场......')}\n`);
+        const s = spinner();
+        s.start('正在打扫战场1......');
         emptyDir(root);
+        s.stop(red(`目标目录 "${targetDir}" 已清理完成.....`));
+    } else if (!fs.existsSync(root)) {
+        fs.mkdirSync(root, { recursive: true });
+    } else {
+        throw new Error(red('✖') + ' Operation cancelled');
     }
 
     outro(`${green('项目创建成功 🎉')}～～～`);
@@ -100,3 +107,7 @@ init()
     .finally(() => {
         process.exit(1);
     });
+
+function sleep(time: number) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+}

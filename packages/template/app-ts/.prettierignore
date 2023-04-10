@@ -1,0 +1,4 @@
+*.ejs
+**/dist
+**/node_modules
+**/_gitignore
