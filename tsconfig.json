@@ -1,10 +1,10 @@
 {
-    "include": ["package"],
+    "include": ["packages"],
     "compilerOptions": {
         "lib": [],
         "baseUrl": "./",
         "types": ["node"],
-        "module": "ESNext",
+        "module": "commonjs",
         "moduleResolution": "Node",
         "resolveJsonModule": true,
         "useDefineForClassFields": true,
@@ -13,7 +13,8 @@
         "strict": true,
         "isolatedModules": true,
         "importsNotUsedAsValues": "error",
-        "target": "ESNext",
+        "outDir": "dist",
+        "target": "ES2020",
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "skipLibCheck": true

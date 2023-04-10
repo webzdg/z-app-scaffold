@@ -137,9 +137,6 @@ module.exports = {
         // 强制操作符周围有空格
         'space-infix-ops': 'error',
 
-        // 强制模板字符串中的空格
-        'template-curly-spacing': ['error', 'always'],
-
         // 强制在注释中使用一致的空格
         'spaced-comment': ['error', 'always'],
 
