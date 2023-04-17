@@ -1,36 +1,51 @@
 {
-	"name": "z-app-scaffold",
-	"version": "1.0.0",
-	"description": "一款自定义前端脚手架App/Monorepo工程",
-	"main": "index.js",
-	"scripts": {
-		"prepare": "husky install"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/webzdg/z-app-scaffold.git"
-	},
-	"keywords": [
-		"scaffold",
-		"fe",
-		"Monorepo"
-	],
-	"author": "webZdg",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/webzdg/z-app-scaffold/issues"
-	},
-	"homepage": "https://github.com/webzdg/z-app-scaffold#readme",
-	"devDependencies": {
-		"@commitlint/cli": "^17.5.1",
-		"@commitlint/config-conventional": "^17.4.4",
-		"@types/node": "^18.15.11",
-		"@typescript-eslint/eslint-plugin": "^5.57.1",
-		"@typescript-eslint/parser": "^5.57.1",
-		"eslint": "^8.37.0",
-		"husky": "^8.0.3",
-		"lint-staged": "^13.2.0",
-		"prettier": "^2.8.7",
-		"typescript": "^5.0.3"
-	}
+    "name": "z-app-scaffold",
+    "version": "1.0.0",
+    "description": "一款自定义前端脚手架App/Monorepo工程",
+    "main": "index.js",
+    "bin": {
+        "z-create-app": "dist/outfile.cjs",
+        "zcap": "dist/outfile.cjs"
+    },
+    "scripts": {
+        "prepare": "husky install",
+        "build": "zx ./packages/scripts/build.mjs",
+        "dev": "tsnd --respawn packages/index.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/webzdg/z-app-scaffold.git"
+    },
+    "keywords": [
+        "scaffold",
+        "fe",
+        "Monorepo"
+    ],
+    "author": "webZdg",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/webzdg/z-app-scaffold/issues"
+    },
+    "homepage": "https://github.com/webzdg/z-app-scaffold#readme",
+    "devDependencies": {
+        "@clack/prompts": "^0.6.3",
+        "@commitlint/cli": "^17.5.1",
+        "@commitlint/config-conventional": "^17.4.4",
+        "@types/gradient-string": "^1.1.2",
+        "@types/minimist": "^1.2.2",
+        "@types/node": "^18.15.11",
+        "@typescript-eslint/eslint-plugin": "^5.57.1",
+        "@typescript-eslint/parser": "^5.57.1",
+        "esbuild": "^0.17.15",
+        "eslint": "^8.37.0",
+        "gradient-string": "^2.0.2",
+        "husky": "^8.0.3",
+        "kolorist": "^1.7.0",
+        "lint-staged": "^13.2.0",
+        "minimist": "^1.2.8",
+        "prettier": "^2.8.7",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.0.3",
+        "zx": "^7.2.1"
+    }
 }

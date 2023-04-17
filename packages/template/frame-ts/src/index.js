@@ -1,2 +1,2 @@
 // eslint-disable-next-line no-console
-console.log('初始化仓库');
+console.log('应用初始化');
