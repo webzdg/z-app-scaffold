@@ -8,7 +8,7 @@ export const BUSINESS = [
     },
     {
         name: '微前端应用',
-        value: 'microFront',
+        value: 'microfront',
         color: yellow,
     },
     {
