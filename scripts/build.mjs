@@ -9,8 +9,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 await esbuild
     .build({
         bundle: true,
-        entryPoints: [resolve(__dirname, '../', 'index.ts')],
-        outfile: resolve(__dirname, '../../', 'dist/outfile.cjs'),
+        entryPoints: [resolve(__dirname, '../', 'packages', 'index.ts')],
+        outfile: resolve(__dirname, '../', 'dist/outfile.cjs'),
         format: 'cjs',
         platform: 'node',
         target: 'esnext',

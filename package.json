@@ -9,7 +9,7 @@
     },
     "scripts": {
         "prepare": "husky install",
-        "build": "zx ./packages/scripts/build.mjs",
+        "build": "zx ./scripts/build.mjs",
         "dev": "tsnd --respawn packages/index.ts"
     },
     "repository": {
