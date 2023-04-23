@@ -104,7 +104,7 @@ async function init() {
 
     // 模版文件地址
     // eslint-disable-next-line no-undef
-    let templateDir = resolve(__dirname, `template/${business}`);
+    let templateDir = resolve(__dirname, '../', `packages/template/${business}`);
     if (typescript) {
         templateDir = templateDir.concat('-ts');
     }

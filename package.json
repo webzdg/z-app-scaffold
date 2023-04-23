@@ -3,6 +3,11 @@
     "version": "1.0.0",
     "description": "一款自定义前端脚手架App/Monorepo工程",
     "main": "index.js",
+    "files": [
+        "packages/template",
+        "dist/outfile.cjs",
+        "!**/node_modules"
+    ],
     "bin": {
         "z-create-app": "dist/outfile.cjs",
         "zcap": "dist/outfile.cjs"
