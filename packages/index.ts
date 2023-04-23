@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /* eslint-disable no-console */
 import { intro, outro, group, text, select, cancel, confirm, spinner } from '@clack/prompts';
 import * as process from 'process';
@@ -102,7 +104,7 @@ async function init() {
 
     // 模版文件地址
     // eslint-disable-next-line no-undef
-    let templateDir = resolve(__dirname, `template/${business}`);
+    let templateDir = resolve(__dirname, '../', `packages/template/${business}`);
     if (typescript) {
         templateDir = templateDir.concat('-ts');
     }
