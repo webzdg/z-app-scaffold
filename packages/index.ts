@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /* eslint-disable no-console */
 import { intro, outro, group, text, select, cancel, confirm, spinner } from '@clack/prompts';
 import * as process from 'process';
